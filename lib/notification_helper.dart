@@ -29,5 +29,9 @@ class NotificationHelper{
   }
 
 
-
+  Future<String> getDeviceToken()async{
+    String? token=await messaging.getToken();
+    print('NotificationHelper.getDeviceToken >> $token');
+    return token!;
+  }
 }
