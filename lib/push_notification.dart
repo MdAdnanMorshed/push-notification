@@ -19,6 +19,7 @@ class _PushNotificationState extends State<PushNotification> {
   void initState() {
     // TODO: implement initState
    notificationHelper.requestNotificationPermission();
+   notificationHelper.firebaseInit(context);
    notificationHelper.getDeviceToken().then((value) {
      print('Get Device Token : $value');
     });
